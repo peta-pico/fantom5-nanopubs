@@ -11,3 +11,5 @@
   | gzip \
   > $1.mod.nq.gz
 
+np mktrusty $1.mod.nq.gz
+
