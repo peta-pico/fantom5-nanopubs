@@ -8,7 +8,7 @@
 (for N in $(seq 1 1 $2); do gunzip -c $1_$N.nq.gz; done) \
   | sed -r 's!^([^ ]+ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.nanopub.org/nschema#Nanopublication> [^ ]+)> .$!\1#Head> .!' \
   | sed -r 's!^([^ ]+ <http://www.nanopub.org/nschema#has(Assertion|Provenance|PublicationInfo)> [^ ]+ [^ ]+)> .$!\1#Head> .!' \
-  | sed -r 's!(<http://purl.org/dc/terms/hasVersion> "2.0")^^<http://www.w3.org/2001/XMLSchema#double>!\1!g' \
+  | sed -r 's!(<http://purl.org/dc/terms/hasVersion> "2.0")\^\^<http://www.w3.org/2001/XMLSchema#double>!\1!g' \
   | sed -r 's!<http://rdf.biosemantics.org/nanopubs/riken/fantom5/version_2/([^ #]+)#?([^ #]*)>!<http://purl.org/nanopub/temp/\1\2>!g' \
   | gzip \
   > $1.mod.nq.gz
