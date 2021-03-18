@@ -7,4 +7,5 @@
 @prefix rsa: <http://rdf.biosemantics.org/ontologies/rsa#> .
 @prefix rid: <http://www.researcherid.com/rid/> .
 @prefix pav12: <http://swan.mindinformatics.org/ontologies/1.2/pav/> .
+@prefix hg19: <http://rdf.biosemantics.org/data/genomeassemblies/hg19#> .
 
