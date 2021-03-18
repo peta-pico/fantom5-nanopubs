@@ -17,4 +17,4 @@ np op filter -o $1.mod.trig $1.mod.nq.gz
 cat prefixes.trig $1.mod.trig | gzip > $1.mod.trig.gz
 np mktrusty -o $1.trusty.trig.gz $1.mod.trig.gz
 
-#rm $1.mod.nq.gz $1.mod.trig $1.mod.trig.gz
+rm $1.mod.nq.gz $1.mod.trig $1.mod.trig.gz
